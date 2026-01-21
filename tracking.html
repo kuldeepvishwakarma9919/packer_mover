@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Tracking | ULTRA-SHIFT PRO</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+       
+
+        /* --- Search Card --- */
+        .track-search-card {
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+            transform: translateY(-100px);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .track-input {
+            border: 2px solid #eee;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+        .track-input:focus { border-color: var(--accent); box-shadow: none; }
+
+        /* --- Tracking Timeline (The Real UI) --- */
+        .tracking-result { display: none; margin-top: 40px; } /* Initially hidden */
+
+        .timeline { position: relative; padding: 40px 0; list-style: none; }
+        .timeline::before {
+            content: ''; position: absolute; top: 0; left: 50%;
+            width: 4px; height: 100%; background: #e9ecef;
+            transform: translateX(-50%);
+        }
+
+        .t-item { position: relative; margin-bottom: 50px; width: 100%; }
+        .t-dot {
+            width: 40px; height: 40px; background: white; border: 4px solid #e9ecef;
+            border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%);
+            z-index: 2; display: flex; align-items: center; justify-content: center;
+        }
+        .t-item.active .t-dot { border-color: var(--track-done); color: var(--track-done); }
+        .t-item.active .t-content { opacity: 1; }
+
+        .t-content {
+            width: 45%; padding: 20px; background: white; border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); opacity: 0.5; transition: 0.4s;
+        }
+        .t-item:nth-child(odd) .t-content { float: left; text-align: right; }
+        .t-item:nth-child(even) .t-content { float: right; text-align: left; }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 768px) {
+            .timeline::before { left: 30px; }
+            .t-dot { left: 30px; transform: none; }
+            .t-content { width: 80%; float: right !important; text-align: left !important; margin-left: 60px; }
+        }
+
+        .btn-accent { background: var(--accent); color: white; border-radius: 15px; padding: 15px 40px; font-weight: 700; border: none; }
+        
+        .status-badge { padding: 8px 20px; border-radius: 50px; font-weight: bold; font-size: 0.8rem; }
+        .bg-onway { background: rgba(255, 107, 0, 0.1); color: var(--accent); }
+
+    </style>
+</head>
+<body>
+
+    <div class="top-bar d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="fas fa-envelope text-accent me-2"></i> kuldeep.helps@gmail.com
+                <i class="fas fa-phone-alt text-accent ms-4 me-2"></i> +91 9517048512
+            </div>
+            <div class="d-flex gap-3">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <button class="border-0 bg-transparent me-2" data-bs-toggle="offcanvas" data-bs-target="#sidebarLeft">
+                <i class="fas fa-bars-staggered fs-2 text-primary"></i>
+            </button>
+            <a class="navbar-brand font-syne fs-2" href="#">ULTRA<span style="color:var(--accent)">SHIFT</span></a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav align-items-center font-syne small">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="service.html">Services</a></li>
+                    <li><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li><a class="nav-link" href="tracking.html">Tracking</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                   
+                    <li><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li><a class="btn btn-dark text-white rounded-pill px-4 ms-3" href="tel:9517048512">CALL PRO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start" id="sidebarLeft">
+        <div class="offcanvas-header pt-5 px-4"><h2 class="font-syne text-white">MENU</h2><button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-body d-flex flex-column p-4 gap-4 font-syne">
+            <a href="index.html" class="text-white text-decoration-none fs-4">01. HOME</a>
+            <a href="about.html" class="text-white text-decoration-none fs-4">02. About</a>
+            <a href="service.html" class="text-white text-decoration-none fs-4">03. SERVICES</a>
+            <a href="blog.html" class="text-white text-decoration-none fs-4">04. Blog</a>
+            <a href="tracking.html" class="text-white text-decoration-none fs-4">04. Tracking</a>
+            <a href="contact.html" class="text-white text-decoration-none fs-4">05. Contact</a>
+            <a href="#track" class="text-white text-decoration-none fs-4">03. TRACKING</a>
+            <a href="#contact" class="text-accent text-decoration-none fs-4">04. CONTACT US</a>
+            <div class="mt-auto border-top border-secondary pt-4 text-white-50">
+                <p>Hotline: 9517048512</p>
+                <p>Email: kuldeep.helps@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <header class="broadcrump-header">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-2 font-syne fw-bold">TRACK YOUR <span class="text-accent">SHIPMENT</span></h1>
+            <p class="fs-5 opacity-75">Enter your Consignment Number to see live status.</p>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="track-search-card" data-aos="fade-up">
+            <div class="row g-3">
+                <div class="col-lg-9">
+                    <input type="text" id="trackID" class="form-control track-input" placeholder="Enter Tracking ID (e.g. US-9517)">
+                </div>
+                <div class="col-lg-3">
+                    <button class="btn btn-accent w-100 h-100" onclick="showTracking()">TRACK NOW</button>
+                </div>
+            </div>
+
+            <div id="resultArea" class="tracking-result">
+                <hr class="my-5">
+                <div class="d-flex justify-content-between align-items-center mb-5">
+                    <div>
+                        <h4 class="font-syne m-0">Order: <span id="displayID">US-9517</span></h4>
+                        <p class="text-secondary">Shifting: Delhi to Mumbai</p>
+                    </div>
+                    <span class="status-badge bg-onway">IN TRANSIT</span>
+                </div>
+
+                <div class="timeline">
+                    <div class="t-item active">
+                        <div class="t-dot"><i class="fas fa-check"></i></div>
+                        <div class="t-content">
+                            <h5>Order Confirmed</h5>
+                            <p class="small text-secondary m-0">20 Jan 2026, 10:00 AM</p>
+                        </div>
+                    </div>
+                    <div class="t-item active">
+                        <div class="t-dot"><i class="fas fa-check"></i></div>
+                        <div class="t-content">
+                            <h5>Packing Completed</h5>
+                            <p class="small text-secondary m-0">21 Jan 2026, 02:30 PM</p>
+                        </div>
+                    </div>
+                    <div class="t-item active">
+                        <div class="t-dot"><i class="fas fa-truck-moving"></i></div>
+                        <div class="t-content">
+                            <h5>In Transit</h5>
+                            <p class="small text-secondary m-0">Current Location: Jaipur Hub</p>
+                        </div>
+                    </div>
+                    <div class="t-item">
+                        <div class="t-dot"><i class="fas fa-house-chimney"></i></div>
+                        <div class="t-content">
+                            <h5>Out for Delivery</h5>
+                            <p class="small text-secondary m-0">Expected: 23 Jan 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 text-center">
+        <h3 class="font-syne mb-4">Common Tracking <span class="text-accent">Issues</span></h3>
+        <div class="row g-4 text-start justify-content-center">
+            <div class="col-md-5 p-4 bg-white rounded-4 shadow-sm m-2">
+                <h6>ID not working?</h6>
+                <p class="small text-secondary">Packing ke 2 ghante baad ID active hoti hai. Please wait karein.</p>
+            </div>
+            <div class="col-md-5 p-4 bg-white rounded-4 shadow-sm m-2">
+                <h6>Contact Driver?</h6>
+                <p class="small text-secondary">Aap +91 9517048512 par call karke driver ka number le sakte hain.</p>
+            </div>
+        </div>
+    </section>
+
+  <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row g-5 text-center text-lg-start">
+                <div class="col-lg-4">
+                    <h2 class="font-syne text-accent">ULTRA SHIFT</h2>
+                    <p class="opacity-50">Providing world-class relocation services since 2012.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>CONTACT</h5>
+                    <p class="opacity-50 mt-3">Email: kuldeep.helps@gmail.com<br>Phone: +91 9517048512</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <h5>FOLLOW US</h5>
+                    <div class="d-flex justify-content-center justify-content-lg-end gap-3 fs-3 mt-3">
+                        <i class="fab fa-facebook text-accent"></i><i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <p class="text-center small opacity-50">© 2026 ULTRA SHIFT | DESIGNED BY KULDEEP</p>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        function showTracking() {
+            let id = document.getElementById('trackID').value;
+            if(id === "") {
+                alert("Please enter a Tracking ID");
+            } else {
+                document.getElementById('displayID').innerText = id;
+                document.getElementById('resultArea').style.display = 'block';
+                window.scrollTo(0, 500);
+            }
+        }
+    </script>
+</body>
+</html>

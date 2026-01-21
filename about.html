@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ULTRA-SHIFT PRO</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+    
+
+        /* --- Story Section --- */
+        .story-img {
+            border-radius: 40px;
+            box-shadow: 20px 20px 0px var(--accent);
+            width: 100%;
+        }
+
+        /* --- Stats Section --- */
+        .stat-box {
+            background: var(--soft-bg);
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+        .stat-box:hover { background: var(--primary); color: white; transform: translateY(-10px); }
+        .stat-number { font-family: 'Syne'; font-size: 3rem; font-weight: 800; color: var(--accent); }
+
+        /* --- Vision & Mission --- */
+        .vision-card {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .vision-card::after {
+            content: ''; position: absolute; top: -20px; right: -20px;
+            width: 80px; height: 80px; background: rgba(255,107,0,0.1); border-radius: 50%;
+        }
+
+        /* --- Team Section --- */
+        .team-member {
+            background: white; border-radius: 20px; overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s;
+        }
+        .team-member:hover { transform: scale(1.03); }
+        .team-img { height: 300px; width: 100%; object-fit: cover; filter: grayscale(100%); transition: 0.5s; }
+        .team-member:hover .team-img { filter: grayscale(0%); }
+
+        .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="fas fa-envelope text-accent me-2"></i> kuldeep.helps@gmail.com
+                <i class="fas fa-phone-alt text-accent ms-4 me-2"></i> +91 9517048512
+            </div>
+            <div class="d-flex gap-3">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <button class="border-0 bg-transparent me-2" data-bs-toggle="offcanvas" data-bs-target="#sidebarLeft">
+                <i class="fas fa-bars-staggered fs-2 text-primary"></i>
+            </button>
+            <a class="navbar-brand font-syne fs-2" href="#">ULTRA<span style="color:var(--accent)">SHIFT</span></a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav align-items-center font-syne small">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="service.html">Services</a></li>
+                    <li><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li><a class="nav-link" href="tracking.html">Tracking</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                   
+                    <li><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li><a class="btn btn-dark text-white rounded-pill px-4 ms-3" href="tel:9517048512">CALL PRO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start" id="sidebarLeft">
+        <div class="offcanvas-header pt-5 px-4"><h2 class="font-syne text-white">MENU</h2><button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-body d-flex flex-column p-4 gap-4 font-syne">
+            <a href="index.html" class="text-white text-decoration-none fs-4">01. HOME</a>
+            <a href="about.html" class="text-white text-decoration-none fs-4">02. About</a>
+            <a href="service.html" class="text-white text-decoration-none fs-4">03. SERVICES</a>
+            <a href="blog.html" class="text-white text-decoration-none fs-4">04. Blog</a>
+            <a href="tracking.html" class="text-white text-decoration-none fs-4">04. Tracking</a>
+            <a href="contact.html" class="text-white text-decoration-none fs-4">05. Contact</a>
+            <a href="#track" class="text-white text-decoration-none fs-4">03. TRACKING</a>
+            <a href="#contact" class="text-accent text-decoration-none fs-4">04. CONTACT US</a>
+            <div class="mt-auto border-top border-secondary pt-4 text-white-50">
+                <p>Hotline: 9517048512</p>
+                <p>Email: kuldeep.helps@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+  
+
+
+     <header class="broadcrump-header">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-2 font-syne fw-bold">OUR PREMIUM <span class="text-accent">STORY</span></h1>
+            <p class="fs-5 opacity-75">14 Years of trust, safety, and millions of happy memories moved.</p>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaad5b?auto=format&fit=crop&w=800" class="story-img" alt="Our Journey">
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <p class="text-accent fw-bold tracking-widest text-uppercase">Who We Are</p>
+                <h2 class="font-syne display-4 mb-4">India's Most Trusted <span class="text-accent">Relocation</span> Partner.</h2>
+                <p class="fs-5 text-secondary">Ultra Shift ki shuruat 2012 mein hui thi ek hi maqsad ke saath—shifting ko stress-free banana. Aaj hum India ke har kone mein apni services de rahe hain.</p>
+                <p class="text-secondary">Hum sirf saaman nahi, aapka bharosa shift karte hain. Hamari team mein expert packers aur trained drivers hain jo har weather aur condition mein aapke saaman ki hifazat karte hain.</p>
+                <div class="mt-4">
+                    <h5 class="font-syne"><i class="fas fa-check-circle text-accent me-2"></i> ISO 9001:2015 Certified</h5>
+                    <h5 class="font-syne"><i class="fas fa-check-circle text-accent me-2"></i> IBA Approved Transporter</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-3" data-aos="fade-up">
+                <div class="stat-box">
+                    <div class="stat-number">25k+</div>
+                    <p class="fw-bold m-0">Happy Families</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-box">
+                    <div class="stat-number">150+</div>
+                    <p class="fw-bold m-0">Cities Covered</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-box">
+                    <div class="stat-number">500+</div>
+                    <p class="fw-bold m-0">Fleet Vehicles</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-box">
+                    <div class="stat-number">14+</div>
+                    <p class="fw-bold m-0">Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="vision-card">
+                        <i class="fas fa-eye fs-1 text-accent mb-4"></i>
+                        <h3 class="font-syne">Our Vision</h3>
+                        <p class="text-secondary fs-5">Logistics industry mein technology aur trust ka aisa combination banana ki shifting ka naam lete hi darr nahi, khushi ho.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="vision-card">
+                        <i class="fas fa-rocket fs-1 text-accent mb-4"></i>
+                        <h3 class="font-syne">Our Mission</h3>
+                        <p class="text-secondary fs-5">Har ek customer ko affordable rates par world-class packing aur zero-damage delivery provide karna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="font-syne display-4 text-center mb-5">LEADERSHIP <span class="text-accent">TEAM</span></h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="flip-left">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400" class="team-img" alt="Founder">
+                    <div class="p-4 text-center">
+                        <h5 class="font-syne m-0">Kuldeep Singh</h5>
+                        <p class="text-accent small">Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400" class="team-img" alt="Manager">
+                    <div class="p-4 text-center">
+                        <h5 class="font-syne m-0">Sneha Sharma</h5>
+                        <p class="text-accent small">Operations Head</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400" class="team-img" alt="Support">
+                    <div class="p-4 text-center">
+                        <h5 class="font-syne m-0">Rahul Verma</h5>
+                        <p class="text-accent small">Logistics Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+      <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-5 text-center text-lg-start">
+                <div class="col-lg-4">
+                    <h2 class="font-syne text-accent">ULTRA SHIFT</h2>
+                    <p class="opacity-50">Leading the Indian logistics industry with speed, safety, and modern technology since 2012.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">QUICK LINKS</h5>
+                    <ul class="list-unstyled opacity-75">
+                        <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Insurance Guide</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">CONNECT</h5>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 fs-3">
+                        <i class="fab fa-facebook text-accent"></i><i class="fab fa-instagram"></i><i class="fab fa-whatsapp"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <p class="text-center small opacity-50">© 2026 ULTRA SHIFT | DESIGNED BY KULDEEP (9517048512)</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919517048512" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>

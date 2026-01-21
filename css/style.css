@@ -1,0 +1,27 @@
+:root {
+            --primary: #051937; 
+            --accent: #FF6B00;  
+            --soft-bg: #F8FAFC;
+        }
+
+        body { font-family: 'Outfit', sans-serif; color: var(--primary); background: var(--soft-bg); overflow-x: hidden; }
+        .font-syne { font-family: 'Syne', sans-serif; text-transform: uppercase; }
+
+        /* --- 1. Top Bar & Navbar --- */
+        .top-bar { background: var(--primary); color: white; padding: 10px 0; font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .navbar { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(15px); padding: 18px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+        .nav-link { font-weight: 600; color: var(--primary) !important; margin: 0 12px; transition: 0.3s; }
+        .nav-link:hover { color: var(--accent) !important; }
+
+        /* --- 2. Left Side Sidebar --- */
+        .offcanvas-start { background: var(--primary) !important; width: 320px !important; border-right: 8px solid var(--accent); }
+
+
+
+         .broadcrump-header {
+            background: linear-gradient(135deg, #051937 0%, #004d7a 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }

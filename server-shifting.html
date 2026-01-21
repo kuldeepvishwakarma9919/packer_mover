@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Service Detail | ULTRA-SHIFT PRO</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+       
+
+        /* --- Page Header --- */
+        .hero-minimal {
+            background: var(--primary);
+            padding: 100px 0;
+            color: white;
+            text-align: center;
+        }
+
+        /* --- Container for Detail & Form --- */
+        .main-wrapper { margin-top: -60px; }
+
+        .content-card {
+            background: white; padding: 40px; border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+        }
+
+        /* --- THE MINIMALIST FORM (Only Bottom Border) --- */
+        .form-container {
+            background: white; padding: 50px; border-radius: 30px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.08);
+        }
+
+        .input-group-minimal {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .input-group-minimal input, 
+        .input-group-minimal select {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--primary);
+            border: none;
+            border-bottom: 2px solid var(--light-gray);
+            background: transparent;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-group-minimal label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            font-size: 1rem;
+            color: #999;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        /* Animation for Floating Label */
+        .input-group-minimal input:focus ~ label,
+        .input-group-minimal input:valid ~ label,
+        .input-group-minimal select:focus ~ label,
+        .input-group-minimal select:valid ~ label {
+            top: -20px;
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Border Animation on Focus */
+        .input-group-minimal input:focus, 
+        .input-group-minimal select:focus {
+            border-bottom: 2px solid var(--accent);
+        }
+
+        /* Highlight bar animation */
+        .bar { position: relative; display: block; width: 100%; }
+        .bar:before {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 0px;
+            position: absolute;
+            background: var(--accent);
+            transition: 0.4s ease all;
+            left: 0;
+        }
+        .input-group-minimal input:focus ~ .bar:before { width: 100%; }
+
+        /* --- Custom Button --- */
+        .btn-minimal {
+            background: var(--primary);
+            color: white;
+            width: 100%;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-family: 'Syne';
+            border: none;
+            letter-spacing: 1px;
+            transition: 0.4s;
+            margin-top: 10px;
+        }
+        .btn-minimal:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* WhatsApp Floating Link */
+        .wa-link { color: #25d366; text-decoration: none; font-weight: 700; }
+    </style>
+</head>
+<body>
+
+
+    <div class="top-bar d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="fas fa-envelope text-accent me-2"></i> kuldeep.helps@gmail.com
+                <i class="fas fa-phone-alt text-accent ms-4 me-2"></i> +91 9517048512
+            </div>
+            <div class="d-flex gap-3">
+                <a href="#"><i class="fab fa-facebook-f text-white"></i></a>
+                <a href="#"><i class="fab fa-instagram text-white"></i></a>
+                <a href="#"><i class="fab fa-youtube text-white"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <button class="border-0 bg-transparent me-2" data-bs-toggle="offcanvas" data-bs-target="#sidebarLeft">
+                <i class="fas fa-bars-staggered fs-2 text-primary"></i>
+            </button>
+            <a class="navbar-brand font-syne fs-2" href="#">ULTRA<span style="color:var(--accent)">SHIFT</span></a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav align-items-center font-syne small">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="service.html">Services</a></li>
+                    <li><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li><a class="nav-link" href="tracking.html">Tracking</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                   
+                    <li><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li><a class="btn btn-dark text-white rounded-pill px-4 ms-3" href="tel:9517048512">CALL PRO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start" id="sidebarLeft">
+        <div class="offcanvas-header pt-5 px-4"><h2 class="font-syne text-white">MENU</h2><button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-body d-flex flex-column p-4 gap-4 font-syne">
+            <a href="index.html" class="text-white text-decoration-none fs-4">01. HOME</a>
+            <a href="about.html" class="text-white text-decoration-none fs-4">02. About</a>
+            <a href="service.html" class="text-white text-decoration-none fs-4">03. SERVICES</a>
+            <a href="blog.html" class="text-white text-decoration-none fs-4">04. Blog</a>
+            <a href="tracking.html" class="text-white text-decoration-none fs-4">04. Tracking</a>
+            <a href="contact.html" class="text-white text-decoration-none fs-4">05. Contact</a>
+            <a href="#track" class="text-white text-decoration-none fs-4">03. TRACKING</a>
+            <a href="#contact" class="text-accent text-decoration-none fs-4">04. CONTACT US</a>
+            <div class="mt-auto border-top border-secondary pt-4 text-white-50">
+                <p>Hotline: 9517048512</p>
+                <p>Email: kuldeep.helps@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <header class="broadcrump-header">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-2 font-syne fw-bold">HOUSEHOLD <span class="text-accent">RELOCATION</span></h1>
+              <p class="opacity-75">Tailored Shifting Solutions for Smart Homes</p>
+        </div>
+    </header>
+
+    <div class="container main-wrapper pb-5">
+        <div class="row g-5">
+            <div class="col-lg-7">
+    <div class="content-card">
+        <img src="https://images.unsplash.com/photo-1520038410233-7141be7e6f97?auto=format&fit=crop&w=1200" class="service-img" alt="Relocation">
+        
+        <h2 class="font-syne mb-4">Smart Shifting for <span class="text-accent">Modern Homes</span></h2>
+        <p class="fs-5 text-secondary mb-4">Aapka saman sirf inventory nahi, aapki mehnat ki kamai hai. Humari **Ultra-Shift Pro** team international packing standards ka use karti hai taaki aapka relocation stress-free aur zero-damage ho.</p>
+
+        <div class="row g-3 mb-5">
+            <div class="col-md-4">
+                <div class="p-3 border-start border-4 border-accent bg-light">
+                    <h4 class="fw-bold mb-0">10k+</h4>
+                    <small class="text-muted">Homes Shifted</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 border-start border-4 border-primary bg-light">
+                    <h4 class="fw-bold mb-0">100%</h4>
+                    <small class="text-muted">Safe Delivery</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 border-start border-4 border-info bg-light">
+                    <h4 class="fw-bold mb-0">24/7</h4>
+                    <small class="text-muted">Live Tracking</small>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="font-syne mb-4">What's Included in <span class="text-accent">Premium Move?</span></h4>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="d-flex gap-3">
+                    <i class="fas fa-box-open text-accent fs-4"></i>
+                    <div>
+                        <h6 class="fw-bold mb-1">5-Layer Packing</h6>
+                        <p class="small text-muted">Bubble wrap, foam sheets, aur corrugated rolls for electronic items.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex gap-3">
+                    <i class="fas fa-couch text-accent fs-4"></i>
+                    <div>
+                        <h6 class="fw-bold mb-1">Furniture Dismantling</h6>
+                        <p class="small text-muted">Beds aur wardrobes ko professional carpenters handle karte hain.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex gap-3">
+                    <i class="fas fa-truck-moving text-accent fs-4"></i>
+                    <div>
+                        <h6 class="fw-bold mb-1">Closed Container Trucks</h6>
+                        <p class="small text-muted">Weather-proof trucks taaki baarish ya dhoop se saman kharab na ho.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex gap-3">
+                    <i class="fas fa-hands-helping text-accent fs-4"></i>
+                    <div>
+                        <h6 class="fw-bold mb-1">Unpacking Support</h6>
+                        <p class="small text-muted">Destination par pahunch kar saman set karne mein puri help.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-black text-white p-4 rounded-4 mb-4">
+            <h4 class="font-syne mb-4 text-center">How It <span class="text-accent">Works</span></h4>
+            <div class="d-flex justify-content-between text-center position-relative">
+                <div style="z-index: 1;">
+                    <div class="bg-accent rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="width:40px; height:40px;">1</div>
+                    <small>Survey</small>
+                </div>
+                <div style="z-index: 1;">
+                    <div class="bg-accent rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="width:40px; height:40px;">2</div>
+                    <small>Pack</small>
+                </div>
+                <div style="z-index: 1;">
+                    <div class="bg-accent rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="width:40px; height:40px;">3</div>
+                    <small>Move</small>
+                </div>
+                <div style="z-index: 1;">
+                    <div class="bg-accent rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="width:40px; height:40px;">4</div>
+                    <small>Settle</small>
+                </div>
+                <div style="position:absolute; top:20px; left:10%; right:10%; height:2px; background:rgba(255,255,255,0.2); z-index:0;"></div>
+            </div>
+        </div>
+
+        <div class="p-3 border rounded-3 d-flex align-items-center gap-3">
+            <i class="fas fa-shield-alt text-dark fs-2"></i>
+            <div>
+                <h6 class="mb-0 fw-bold text-dark">Fully Insured Shifting</h6>
+                <p class="small text-muted mb-0">Every item is covered under our transit insurance policy for your peace of mind.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+            <div class="col-lg-5">
+                <div class="form-container">
+                    <h3 class="font-syne mb-5">Quick <span class="text-accent">Inquiry</span></h3>
+                    
+                    <form action="#">
+                        <div class="input-group-minimal">
+                            <input type="text" required>
+                            <span class="bar"></span>
+                            <label>Your Full Name</label>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group-minimal">
+                                    <input type="text" required>
+                                    <span class="bar"></span>
+                                    <label>From City</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group-minimal">
+                                    <input type="text" required>
+                                    <span class="bar"></span>
+                                    <label>To City</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group-minimal">
+                            <input type="tel" required>
+                            <span class="bar"></span>
+                            <label>Mobile Number</label>
+                        </div>
+
+                        <div class="input-group-minimal">
+                            <select required>
+                                <option value="" disabled selected></option>
+                                <option value="1bhk">1 BHK / Studio</option>
+                                <option value="2bhk">2 BHK Shifting</option>
+                                <option value="3bhk">3+ BHK / Villa</option>
+                                <option value="office">Office / Corporate</option>
+                            </select>
+                            <span class="bar"></span>
+                            <label>Shifting Requirement</label>
+                        </div>
+
+                        <button type="submit" class="btn-minimal">GET A CALL BACK</button>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <p class="small">Or Chat with us on <a href="#" class="wa-link">WhatsApp</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row g-5 text-center text-lg-start">
+                <div class="col-lg-4">
+                    <h2 class="font-syne text-accent">ULTRA SHIFT</h2>
+                    <p class="opacity-50">Providing world-class relocation services since 2012.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>CONTACT</h5>
+                    <p class="opacity-50 mt-3">Email: kuldeep.helps@gmail.com<br>Phone: +91 9517048512</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <h5>FOLLOW US</h5>
+                    <div class="d-flex justify-content-center justify-content-lg-end gap-3 fs-3 mt-3">
+                        <i class="fab fa-facebook text-accent"></i><i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <p class="text-center small opacity-50">© 2026 ULTRA SHIFT | DESIGNED BY KULDEEP</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919517048512" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+
+</body>
+</html>

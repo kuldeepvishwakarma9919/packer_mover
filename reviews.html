@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews | ULTRA-SHIFT PRO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #051937; --accent: #FF6B00; }
+        body { font-family: 'Outfit', sans-serif; background: #f8f9fa; }
+        .review-card { background: white; border-radius: 20px; padding: 30px; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; height: 100%; }
+        .review-card:hover { transform: translateY(-10px); }
+        .user-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; }
+        .stars { color: #ffc107; margin-bottom: 10px; }
+        .header-section { background: var(--primary); color: white; padding: 100px 0; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%); }
+    </style>
+</head>
+<body>
+    <header class="header-section">
+        <h1 class="font-syne display-3 fw-bold">CLIENT <span style="color:var(--accent)">FEEDBACK</span></h1>
+        <p class="fs-5 opacity-75">Humari service ke baare mein log kya kehte hain.</p>
+    </header>
+
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-secondary">"Ultra Shift ne meri Delhi se Mumbai ki shifting bahut aasan bana di. Ek bhi glass nahi toota. Best service!"</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?u=1" class="user-img">
+                        <div><h6 class="m-0">Amit Sharma</h6><small class="text-muted">Business Owner</small></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-secondary">"Very professional team. Inka packing material quality top-notch hai. Highly recommended for office shifting."</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?u=2" class="user-img">
+                        <div><h6 class="m-0">Priya Verma</h6><small class="text-muted">Software Engineer</small></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-secondary">"Value for money! Dusre packers se kam rate mein bahut achhi service di. Driver bhi bahut polite tha."</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?u=3" class="user-img">
+                        <div><h6 class="m-0">Rajesh Kumar</h6><small class="text-muted">Banker</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

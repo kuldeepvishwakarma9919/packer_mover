@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estimate Calculator | ULTRA-SHIFT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #051937; --accent: #FF6B00; }
+        body { font-family: 'Outfit', sans-serif; background: #F8FAFC; }
+        .calc-card { background: white; border-radius: 30px; padding: 50px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
+        .price-display { font-size: 3rem; font-weight: 800; color: var(--accent); }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="font-syne display-4">COST <span style="color:var(--accent)">CALCULATOR</span></h1>
+            <p>Get a rough estimate for your shifting in seconds.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="calc-card">
+                    <div class="mb-4">
+                        <label class="fw-bold mb-2">Select House Type:</label>
+                        <select id="houseType" class="form-select p-3 border-0 bg-light" onchange="calculatePrice()">
+                            <option value="5000">1 BHK (Small)</option>
+                            <option value="8000">2 BHK (Medium)</option>
+                            <option value="12000">3 BHK (Large)</option>
+                            <option value="15000">Villa / Bungalow</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="fw-bold mb-2">Distance (Approx KM):</label>
+                        <input type="number" id="distance" class="form-control p-3 border-0 bg-light" placeholder="e.g. 50" oninput="calculatePrice()">
+                    </div>
+
+                    <hr class="my-5">
+
+                    <div class="text-center">
+                        <h4 class="text-secondary">Estimated Price:</h4>
+                        <div class="price-display">₹<span id="totalPrice">0</span>*</div>
+                        <p class="small text-muted mt-3">*Final price survey ke baad confirm hogi.</p>
+                        <a href="tel:9517048512" class="btn btn-warning btn-lg w-100 py-3 fw-bold mt-4">BOOK AT THIS PRICE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculatePrice() {
+            let basePrice = parseInt(document.getElementById('houseType').value);
+            let dist = document.getElementById('distance').value;
+            let total = basePrice + (dist * 15); // Simple Logic: Base + 15rs per KM
+            if(dist > 0) {
+                document.getElementById('totalPrice').innerText = total.toLocaleString();
+            }
+        }
+    </script>
+</body>
+</html>
