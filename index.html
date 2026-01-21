@@ -164,29 +164,74 @@
         </div>
     </section>
 
-    <section class="container py-5" id="track">
-        <div class="bg-dark p-5 rounded-5 text-white shadow-lg overflow-hidden position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="font-syne display-5">TRACK <span class="text-accent">LIVE</span> CARGO</h2>
-                    <p class="opacity-75 mb-4">Enter your tracking ID to see real-time location of your goods.</p>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control p-4 border-0" placeholder="e.g. ULTRA-9517">
-                        <button class="btn btn-accent px-5 fw-bold">TRACK</button>
-                    </div>
+<section class="container py-5" id="track">
+    <div class="bg-dark p-4 p-md-5 rounded-5 text-white shadow-lg overflow-hidden position-relative">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="font-syne display-6 display-md-5">TRACK <span class="text-accent">LIVE</span> CARGO</h2>
+                <p class="opacity-75 mb-4">Enter your tracking ID to see real-time location of your goods.</p>
+                
+                <div class="input-group mb-3 flex-column flex-sm-row">
+                    <input type="text" class="form-control p-3 p-md-4 border-0 mb-2 mb-sm-0" placeholder="e.g. ULTRA-9517" style="border-radius: 12px !important;">
+                    <button class="btn btn-accent px-5 fw-bold ms-sm-2" style="border-radius: 12px !important;">TRACK</button>
                 </div>
-                <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                    <div class="d-flex justify-content-center align-items-center gap-5">
-                        <div class="text-center"><i class="fas fa-warehouse fs-1 text-accent"></i><p>Dispatched</p></div>
-                        <div class="flex-grow-1 border-top border-accent border-dashed"></div>
-                        <div class="text-center"><i class="fas fa-truck-moving fs-1"></i><p>On Way</p></div>
-                        <div class="flex-grow-1 border-top opacity-25"></div>
-                        <div class="text-center opacity-25"><i class="fas fa-house-circle-check fs-1"></i><p>Delivered</p></div>
+            </div>
+
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-4 gap-md-5">
+                    
+                    <div class="text-center">
+                        <i class="fas fa-warehouse fs-1 text-accent mb-2"></i>
+                        <p class="mb-0">Dispatched</p>
                     </div>
+
+                    <div class="d-md-block border-start border-md-top border-accent border-dashed" style="height: 40px; width: 0px; border-width: 2px !important;"></div>
+                    <div class="d-none d-md-block flex-grow-1 border-top border-accent border-dashed"></div>
+
+                    <div class="text-center">
+                        <i class="fas fa-truck-moving fs-1 text-white mb-2"></i>
+                        <p class="mb-0">On Way</p>
+                    </div>
+
+                    <div class="d-md-block border-start border-md-top border-secondary border-dashed opacity-25" style="height: 40px; width: 0px; border-width: 2px !important;"></div>
+                    <div class="d-none d-md-block flex-grow-1 border-top opacity-25"></div>
+
+                    <div class="text-center opacity-25">
+                        <i class="fas fa-house-circle-check fs-1 mb-2"></i>
+                        <p class="mb-0">Delivered</p>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+    /* Chote mobile screens ke liye custom tweak */
+    @media (max-width: 576px) {
+        .input-group > .form-control {
+            width: 100% !important;
+            flex: none !important;
+        }
+        .btn-accent {
+            width: 100% !important;
+            margin-left: 0 !important;
+        }
+        /* Mobile par dotted lines ko set karne ke liye */
+        .border-start {
+            margin: -10px 0;
+            display: block !important;
+        }
+    }
+    
+    /* Desktop par vertical lines gayab karne ke liye */
+    @media (min-width: 768px) {
+        .border-start {
+            display: none !important;
+        }
+    }
+</style>
 
     <section class="container py-5" id="faq">
         <p class="section-tag text-center mb-2">Help Center</p>
