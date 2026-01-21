@@ -4,6 +4,13 @@
             --soft-bg: #F8FAFC;
         }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
         body { font-family: 'Outfit', sans-serif; color: var(--primary); background: var(--soft-bg); overflow-x: hidden; }
         .font-syne { font-family: 'Syne', sans-serif; text-transform: uppercase; }
 
