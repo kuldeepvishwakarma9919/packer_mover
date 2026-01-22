@@ -10,34 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        
-
-        /* --- 3. Hero & Booking --- */
-        .hero { background: linear-gradient(135deg, #051937 0%, #004d7a 100%); padding: 160px 0 100px; color: white; clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%); }
-        .booking-card { background: white; border-radius: 30px; padding: 40px; box-shadow: 0 50px 100px rgba(0,0,0,0.1); transform: translateY(-80px); }
-
-        /* --- 4. Ultra Pro FAQ Design --- */
-        .faq-item { background: white; border-radius: 20px; border: 1px solid #eee; margin-bottom: 15px; overflow: hidden; transition: 0.4s; }
-        .faq-item:hover { border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .accordion-button { font-family: 'Syne'; font-size: 1.1rem; padding: 25px; background: transparent !important; color: var(--primary) !important; box-shadow: none !important; }
-        .accordion-button:not(.collapsed) { color: var(--accent) !important; }
-
-        /* --- 5. Ultra Pro Contact Form --- */
-        .contact-box { background: var(--primary); border-radius: 40px; padding: 60px; color: white; position: relative; overflow: hidden; }
-        .contact-box::before { content: ''; position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: var(--accent); opacity: 0.2; border-radius: 50%; }
-        .form-control-pro { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; color: white !important; transition: 0.3s; }
-        .form-control-pro:focus { background: rgba(255,255,255,0.1); border-color: var(--accent); box-shadow: none; }
-        .form-control-pro::placeholder { color: rgba(255,255,255,0.4); }
-
-        /* --- Utils --- */
-        .btn-accent { background: var(--accent); color: white; border-radius: 12px; padding: 15px 35px; border: none; font-weight: 700; transition: 0.4s; }
-        .btn-accent:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(255,107,0,0.4); color: white; }
-        .section-tag { color: var(--accent); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem; }
-        .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); z-index: 999; text-decoration: none; }
-
-    </style>
 </head>
 <body>
 
@@ -205,31 +177,7 @@
     </div>
 </section>
 
-<style>
-    /* Chote mobile screens ke liye custom tweak */
-    @media (max-width: 576px) {
-        .input-group > .form-control {
-            width: 100% !important;
-            flex: none !important;
-        }
-        .btn-accent {
-            width: 100% !important;
-            margin-left: 0 !important;
-        }
-        /* Mobile par dotted lines ko set karne ke liye */
-        .border-start {
-            margin: -10px 0;
-            display: block !important;
-        }
-    }
-    
-    /* Desktop par vertical lines gayab karne ke liye */
-    @media (min-width: 768px) {
-        .border-start {
-            display: none !important;
-        }
-    }
-</style>
+
 
     <section class="container py-5" id="faq">
         <p class="section-tag text-center mb-2">Help Center</p>
@@ -303,51 +251,6 @@
         </div>
     </div>
 </section>
-
-<style>
-    /* Custom Styling for the Form and Button */
-    .form-control-pro {
-        padding: 15px;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        /* background: #f8f9fa; */
-        outline: none;
-        transition: 0.3s;
-    }
-    .form-control-pro:focus {
-        border-color: var(--accent);
-        /* background: #fff; */
-        box-shadow: 0 5px 15px rgba(255,107,0,0.1);
-    }
-
-    /* Mobile Specific Fixes */
-    @media (max-width: 768px) {
-        .custom-submit-btn {
-            width: auto !important; /* Button ko full width se hatane ke liye */
-            padding-left: 30px !important;
-            padding-right: 30px !important;
-            font-size: 0.9rem;
-        }
-        .contact-box {
-            padding: 30px 20px !important;
-        }
-        h2.display-5 {
-            font-size: 2.5rem;
-        }
-    }
-
-    .icon-box-small {
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(255, 107, 0, 0.1);
-        border-radius: 12px;
-    }
-    .text-accent { color: #FF6B00 !important; }
-    .btn-accent { background: #FF6B00; color: white; border: none; border-radius: 12px; }
-</style>
 
     <footer class="bg-dark text-white pt-5 pb-3">
     <div class="container">
