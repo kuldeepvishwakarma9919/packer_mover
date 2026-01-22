@@ -86,8 +86,6 @@
             <a href="blog.html" class="text-white text-decoration-none fs-4">04. Blog</a>
             <a href="tracking.html" class="text-white text-decoration-none fs-4">04. Tracking</a>
             <a href="contact.html" class="text-white text-decoration-none fs-4">05. Contact</a>
-            <a href="#track" class="text-white text-decoration-none fs-4">03. TRACKING</a>
-            <a href="#contact" class="text-accent text-decoration-none fs-4">04. CONTACT US</a>
             <div class="mt-auto border-top border-secondary pt-4 text-white-50">
                 <p>Hotline: 9517048512</p>
                 <p>Email: kuldeep.helps@gmail.com</p>
@@ -164,29 +162,74 @@
         </div>
     </section>
 
-    <section class="container py-5" id="track">
-        <div class="bg-primary p-5 rounded-5 text-white shadow-lg overflow-hidden position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="font-syne display-5">TRACK <span class="text-accent">LIVE</span> CARGO</h2>
-                    <p class="opacity-75 mb-4">Enter your tracking ID to see real-time location of your goods.</p>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control p-4 border-0" placeholder="e.g. ULTRA-9517">
-                        <button class="btn btn-accent px-5 fw-bold">TRACK</button>
-                    </div>
+<section class="container py-5" id="track">
+    <div class="bg-dark p-4 p-md-5 rounded-5 text-white shadow-lg overflow-hidden position-relative">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="font-syne display-6 display-md-5">TRACK <span class="text-accent">LIVE</span> CARGO</h2>
+                <p class="opacity-75 mb-4">Enter your tracking ID to see real-time location of your goods.</p>
+                
+                <div class="input-group mb-3 flex-column flex-sm-row">
+                    <input type="text" class="form-control p-3 p-md-4 border-0 mb-2 mb-sm-0" placeholder="e.g. ULTRA-9517" style="border-radius: 12px !important;">
+                    <button class="btn btn-accent px-5 fw-bold ms-sm-2" style="border-radius: 12px !important;">TRACK</button>
                 </div>
-                <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                    <div class="d-flex justify-content-center align-items-center gap-5">
-                        <div class="text-center"><i class="fas fa-warehouse fs-1 text-accent"></i><p>Dispatched</p></div>
-                        <div class="flex-grow-1 border-top border-accent border-dashed"></div>
-                        <div class="text-center"><i class="fas fa-truck-moving fs-1"></i><p>On Way</p></div>
-                        <div class="flex-grow-1 border-top opacity-25"></div>
-                        <div class="text-center opacity-25"><i class="fas fa-house-circle-check fs-1"></i><p>Delivered</p></div>
+            </div>
+
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-4 gap-md-5">
+                    
+                    <div class="text-center">
+                        <i class="fas fa-warehouse fs-1 text-accent mb-2"></i>
+                        <p class="mb-0">Dispatched</p>
                     </div>
+
+                    <div class="d-md-block border-start border-md-top border-accent border-dashed" style="height: 40px; width: 0px; border-width: 2px !important;"></div>
+                    <div class="d-none d-md-block flex-grow-1 border-top border-accent border-dashed"></div>
+
+                    <div class="text-center">
+                        <i class="fas fa-truck-moving fs-1 text-white mb-2"></i>
+                        <p class="mb-0">On Way</p>
+                    </div>
+
+                    <div class="d-md-block border-start border-md-top border-secondary border-dashed opacity-25" style="height: 40px; width: 0px; border-width: 2px !important;"></div>
+                    <div class="d-none d-md-block flex-grow-1 border-top opacity-25"></div>
+
+                    <div class="text-center opacity-25">
+                        <i class="fas fa-house-circle-check fs-1 mb-2"></i>
+                        <p class="mb-0">Delivered</p>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+    /* Chote mobile screens ke liye custom tweak */
+    @media (max-width: 576px) {
+        .input-group > .form-control {
+            width: 100% !important;
+            flex: none !important;
+        }
+        .btn-accent {
+            width: 100% !important;
+            margin-left: 0 !important;
+        }
+        /* Mobile par dotted lines ko set karne ke liye */
+        .border-start {
+            margin: -10px 0;
+            display: block !important;
+        }
+    }
+    
+    /* Desktop par vertical lines gayab karne ke liye */
+    @media (min-width: 768px) {
+        .border-start {
+            display: none !important;
+        }
+    }
+</style>
 
     <section class="container py-5" id="faq">
         <p class="section-tag text-center mb-2">Help Center</p>
@@ -218,59 +261,145 @@
     </section>
 
     <section class="container py-5" id="contact">
-        <div class="contact-box shadow-2xl" data-aos="zoom-in">
-            <div class="row g-5">
-                <div class="col-lg-5">
-                    <h2 class="font-syne display-5 text-accent">LET'S TALK</h2>
-                    <p class="fs-5 opacity-75 mb-5">Agar koi doubt hai toh turant message karein, hamari team 10 mins mein contact karegi.</p>
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="icon-box-small me-3"><i class="fas fa-phone-volume fs-3 text-accent"></i></div>
-                        <div><p class="small m-0">Call Support</p><h5>+91 9517048512</h5></div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <div class="icon-box-small me-3"><i class="fas fa-envelope-open-text fs-3 text-accent"></i></div>
-                        <div><p class="small m-0">Official Email</p><h5>kuldeep.helps@gmail.com</h5></div>
-                    </div>
+    <div class="contact-box shadow-lg p-4 p-md-5 rounded-5" data-aos="zoom-in">
+        <div class="row g-5">
+            <div class="col-lg-5 text-start">
+                <h2 class="font-syne display-5 text-accent">LET'S TALK</h2>
+                <p class="fs-5 opacity-75 mb-5">Agar koi doubt hai toh turant message karein, hamari team 10 mins mein contact karegi.</p>
+                
+                <div class="d-flex align-items-center mb-4">
+                    <div class="icon-box-small me-3"><i class="fas fa-phone-volume fs-3 text-accent"></i></div>
+                    <div><p class="small m-0">Call Support</p><h5 class="mb-0">+91 9517048512</h5></div>
                 </div>
-                <div class="col-lg-7">
-                    <div class="row g-3">
-                        <div class="col-md-6"><input type="text" class="form-control-pro w-100" placeholder="Full Name"></div>
-                        <div class="col-md-6"><input type="tel" class="form-control-pro w-100" placeholder="Mobile Number"></div>
-                        <div class="col-12"><input type="email" class="form-control-pro w-100" placeholder="Email Address"></div>
-                        <div class="col-12"><textarea class="form-control-pro w-100" rows="4" placeholder="How can we help you?"></textarea></div>
-                        <div class="col-12"><button class="btn btn-accent px-5 py-3 w-100 font-syne">SEND ENQUIRY NOW</button></div>
+                
+                <div class="d-flex align-items-center mb-4 mb-lg-0">
+                    <div class="icon-box-small me-3"><i class="fas fa-envelope-open-text fs-3 text-accent"></i></div>
+                    <div><p class="small m-0">Official Email</p><h5 class="mb-0 text-break">kuldeep.helps@gmail.com</h5></div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                        <input type="text" class="form-control-pro w-100" placeholder="Full Name">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <input type="tel" class="form-control-pro w-100" placeholder="Mobile Number">
+                    </div>
+                    <div class="col-12">
+                        <input type="email" class="form-control-pro w-100" placeholder="Email Address">
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control-pro w-100" rows="4" placeholder="How can we help you?"></textarea>
+                    </div>
+                    
+                    <div class="col-12 text-center text-md-start">
+                        <button class="btn btn-accent px-5 py-3 custom-submit-btn font-syne">
+                            SEND ENQUIRY NOW
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+    /* Custom Styling for the Form and Button */
+    .form-control-pro {
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        /* background: #f8f9fa; */
+        outline: none;
+        transition: 0.3s;
+    }
+    .form-control-pro:focus {
+        border-color: var(--accent);
+        /* background: #fff; */
+        box-shadow: 0 5px 15px rgba(255,107,0,0.1);
+    }
+
+    /* Mobile Specific Fixes */
+    @media (max-width: 768px) {
+        .custom-submit-btn {
+            width: auto !important; /* Button ko full width se hatane ke liye */
+            padding-left: 30px !important;
+            padding-right: 30px !important;
+            font-size: 0.9rem;
+        }
+        .contact-box {
+            padding: 30px 20px !important;
+        }
+        h2.display-5 {
+            font-size: 2.5rem;
+        }
+    }
+
+    .icon-box-small {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 107, 0, 0.1);
+        border-radius: 12px;
+    }
+    .text-accent { color: #FF6B00 !important; }
+    .btn-accent { background: #FF6B00; color: white; border: none; border-radius: 12px; }
+</style>
 
     <footer class="bg-dark text-white pt-5 pb-3">
-        <div class="container">
-            <div class="row g-5 text-center text-lg-start">
-                <div class="col-lg-4">
-                    <h2 class="font-syne text-accent">ULTRA SHIFT</h2>
-                    <p class="opacity-50">Leading the Indian logistics industry with speed, safety, and modern technology since 2012.</p>
+    <div class="container">
+        <div class="row g-5 text-start">
+            
+            <div class="col-lg-4">
+                <h2 class="font-syne text-accent">ULTRA SHIFT</h2>
+                <p class="opacity-50">Leading the Indian logistics industry with speed, safety, and modern technology since 2012.</p>
+            </div>
+
+            <div class="col-lg-4">
+                <h5 class="mb-4">QUICK LINKS</h5>
+                <ul class="list-unstyled opacity-75 d-flex flex-column gap-2">
+                    <li><a href="#" class="text-white text-decoration-none hover-link">Privacy Policy</a></li>
+                    <li><a href="#" class="text-white text-decoration-none hover-link">Terms & Conditions</a></li>
+                    <li><a href="#" class="text-white text-decoration-none hover-link">Insurance Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4">
+                <h5 class="mb-4">CONNECT</h5>
+                <div class="d-flex justify-content-start gap-4 fs-3">
+                    <a href="#" class="text-accent"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
                 </div>
-                <div class="col-lg-4">
-                    <h5 class="mb-4">QUICK LINKS</h5>
-                    <ul class="list-unstyled opacity-75">
-                        <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Insurance Guide</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <h5 class="mb-4">CONNECT</h5>
-                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 fs-3">
-                        <i class="fab fa-facebook text-accent"></i><i class="fab fa-instagram"></i><i class="fab fa-whatsapp"></i>
-                    </div>
+                <div class="mt-4">
+                    <p class="mb-1 small opacity-50 font-syne">OFFICIAL SUPPORT</p>
+                    <p class="fw-bold">+91 9517048512</p>
                 </div>
             </div>
-            <hr class="my-5 opacity-10">
-            <p class="text-center small opacity-50">© 2026 ULTRA SHIFT | DESIGNED BY KULDEEP (9517048512)</p>
         </div>
-    </footer>
+
+        <hr class="my-5 opacity-10">
+        
+        <div class="row">
+            <div class="col-md-12 text-start text-md-center">
+                <p class="small opacity-50">© 2026 ULTRA SHIFT | DESIGNED BY KULDEEP (9517048512)</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Chota sa hover effect links ke liye */
+    .hover-link:hover {
+        color: var(--accent) !important;
+        padding-left: 5px;
+        transition: 0.3s;
+    }
+    .text-accent { color: #FF6B00 !important; }
+</style>
 
     <a href="https://wa.me/919517048512" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
 
