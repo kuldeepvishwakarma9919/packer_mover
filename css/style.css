@@ -10,20 +10,17 @@ html, body {
     margin: 0;
     padding: 0;
 }
-body { font-family: 'Outfit', sans-serif; color: var(--primary); background: var(--soft-bg); overflow-x: hidden; }
-.font-syne { font-family: 'Syne', sans-serif; text-transform: uppercase; }
-.top-bar { background: var(--primary); color: white; padding: 10px 0; font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.navbar { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(15px); padding: 18px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
-.nav-link { font-weight: 600; color: var(--primary) !important; margin: 0 12px; transition: 0.3s; }
-.nav-link:hover { color: var(--accent) !important; }
-.offcanvas-start { background: var(--primary) !important; width: 320px !important; border-right: 8px solid var(--accent); }
-.broadcrump-header {
-    background: linear-gradient(135deg, #051937 0%, #004d7a 100%);
-    padding: 120px 0 80px;
-    color: white;
-    text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-}
+
+        body { font-family: 'Outfit', sans-serif; color: var(--primary); background: var(--soft-bg); overflow-x: hidden; }
+        .font-syne { font-family: 'Syne', sans-serif; text-transform: uppercase; }
+
+        .top-bar { background: var(--primary); color: white; padding: 10px 0; font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .navbar { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(15px); padding: 18px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+        .nav-link { font-weight: 600; color: var(--primary) !important; margin: 0 12px; transition: 0.3s; }
+        .nav-link:hover { color: var(--accent) !important; }
+
+  
+        .offcanvas-start { background: var(--primary) !important; width: 320px !important; border-right: 8px solid var(--accent); }
 
 
 .form-control-pro {
@@ -93,7 +90,7 @@ body { font-family: 'Outfit', sans-serif; color: var(--primary); background: var
     }
 
 
-/* Index Page  */
+
 .hero { background: linear-gradient(135deg, #051937 0%, #004d7a 100%); padding: 160px 0 100px; color: white; clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%); }
 .booking-card { background: white; border-radius: 30px; padding: 40px; box-shadow: 0 50px 100px rgba(0,0,0,0.1); transform: translateY(-80px); }
 .faq-item { background: white; border-radius: 20px; border: 1px solid #eee; margin-bottom: 15px; overflow: hidden; transition: 0.4s; }

@@ -176,7 +176,28 @@
     </div>
 </section>
 
-
+<style>
+    @media (max-width: 576px) {
+        .input-group > .form-control {
+            width: 100% !important;
+            flex: none !important;
+        }
+        .btn-accent {
+            width: 100% !important;
+            margin-left: 0 !important;
+        }
+        .border-start {
+            margin: -10px 0;
+            display: block !important;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .border-start {
+            display: none !important;
+        }
+    }
+</style>
 
     <section class="container py-5" id="faq">
         <p class="section-tag text-center mb-2">Help Center</p>
@@ -251,6 +272,50 @@
     </div>
 </section>
 
+<style>
+    .form-control-pro {
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        
+        outline: none;
+        transition: 0.3s;
+    }
+    .form-control-pro:focus {
+        border-color: var(--accent);
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(255,107,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+        .custom-submit-btn {
+            width: auto !important; /* Button ko full width se hatane ke liye */
+            padding-left: 30px !important;
+            padding-right: 30px !important;
+            font-size: 0.9rem;
+        }
+        .contact-box {
+            padding: 30px 20px !important;
+        }
+        h2.display-5 {
+            font-size: 2.5rem;
+        }
+    }
+
+    .icon-box-small {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 107, 0, 0.1);
+        border-radius: 12px;
+    }
+    .text-accent { color: #FF6B00 !important; }
+    .btn-accent { background: #FF6B00; color: white; border: none; border-radius: 12px; }
+</style>
+
+
     <footer class="bg-dark text-white pt-5 pb-3">
     <div class="container">
         <div class="row g-5 text-start">
@@ -294,7 +359,6 @@
 </footer>
 
 <style>
-    /* Chota sa hover effect links ke liye */
     .hover-link:hover {
         color: var(--accent) !important;
         padding-left: 5px;
