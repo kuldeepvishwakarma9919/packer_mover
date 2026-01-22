@@ -4,75 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Tracking | ULTRA-SHIFT PRO</title>
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-       
-
-        /* --- Search Card --- */
-        .track-search-card {
-            background: white;
-            border-radius: 30px;
-            padding: 40px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
-            transform: translateY(-100px);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .track-input {
-            border: 2px solid #eee;
-            padding: 20px;
-            border-radius: 15px;
-            font-size: 1.1rem;
-            transition: 0.3s;
-        }
-        .track-input:focus { border-color: var(--accent); box-shadow: none; }
-
-        /* --- Tracking Timeline (The Real UI) --- */
-        .tracking-result { display: none; margin-top: 40px; } /* Initially hidden */
-
-        .timeline { position: relative; padding: 40px 0; list-style: none; }
-        .timeline::before {
-            content: ''; position: absolute; top: 0; left: 50%;
-            width: 4px; height: 100%; background: #e9ecef;
-            transform: translateX(-50%);
-        }
-
-        .t-item { position: relative; margin-bottom: 50px; width: 100%; }
-        .t-dot {
-            width: 40px; height: 40px; background: white; border: 4px solid #e9ecef;
-            border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%);
-            z-index: 2; display: flex; align-items: center; justify-content: center;
-        }
-        .t-item.active .t-dot { border-color: var(--track-done); color: var(--track-done); }
-        .t-item.active .t-content { opacity: 1; }
-
-        .t-content {
-            width: 45%; padding: 20px; background: white; border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05); opacity: 0.5; transition: 0.4s;
-        }
-        .t-item:nth-child(odd) .t-content { float: left; text-align: right; }
-        .t-item:nth-child(even) .t-content { float: right; text-align: left; }
-
-        /* --- Mobile Responsiveness --- */
-        @media (max-width: 768px) {
-            .timeline::before { left: 30px; }
-            .t-dot { left: 30px; transform: none; }
-            .t-content { width: 80%; float: right !important; text-align: left !important; margin-left: 60px; }
-        }
-
-        .btn-accent { background: var(--accent); color: white; border-radius: 15px; padding: 15px 40px; font-weight: 700; border: none; }
-        
-        .status-badge { padding: 8px 20px; border-radius: 50px; font-weight: bold; font-size: 0.8rem; }
-        .bg-onway { background: rgba(255, 107, 0, 0.1); color: var(--accent); }
-
-    </style>
 </head>
 <body>
 
@@ -83,9 +19,9 @@
                 <i class="fas fa-phone-alt text-accent ms-4 me-2"></i> +91 9517048512
             </div>
             <div class="d-flex gap-3">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook-f text-white"></i></a>
+                <a href="#"><i class="fab fa-instagram text-white"></i></a>
+                <a href="#"><i class="fab fa-youtube text-white"></i></a>
             </div>
         </div>
     </div>
@@ -93,7 +29,7 @@
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <button class="border-0 bg-transparent me-2" data-bs-toggle="offcanvas" data-bs-target="#sidebarLeft">
-                <i class="fas fa-bars-staggered fs-2 text-primary"></i>
+                <i class="fas fa-bars-staggered fs-2 text-dark"></i>
             </button>
             <a class="navbar-brand font-syne fs-2" href="#">ULTRA<span style="color:var(--accent)">SHIFT</span></a>
             <div class="collapse navbar-collapse justify-content-end">
@@ -104,8 +40,6 @@
                     <li><a class="nav-link" href="blog.html">Blog</a></li>
                     <li><a class="nav-link" href="tracking.html">Tracking</a></li>
                     <li><a class="nav-link" href="contact.html">Contact</a></li>
-                   
-                    <li><a class="nav-link" href="#faq">FAQ</a></li>
                     <li><a class="btn btn-dark text-white rounded-pill px-4 ms-3" href="tel:9517048512">CALL PRO</a></li>
                 </ul>
             </div>
@@ -121,9 +55,9 @@
             <a href="blog.html" class="text-white text-decoration-none fs-4">04. Blog</a>
             <a href="tracking.html" class="text-white text-decoration-none fs-4">04. Tracking</a>
             <a href="contact.html" class="text-white text-decoration-none fs-4">05. Contact</a>
-            <div class="mt-auto border-top border-secondary pt-4 text-white-50">
-                <p>Hotline: 9517048512</p>
-                <p>Email: kuldeep.helps@gmail.com</p>
+            <div class="mt-auto border-top border-secondary pt-4 text-white">
+                <p>9517048512</p>
+                <p>kuldeep.helps@gmail.com</p>
             </div>
         </div>
     </div>
@@ -210,7 +144,7 @@
             
             <div class="col-lg-4">
                 <h2 class="font-syne text-accent">ULTRA SHIFT</h2>
-                <p class="opacity-50">Leading the Indian logistics industry with speed, safety, and modern technology since 2012.</p>
+                <p class="">Leading the Indian logistics industry with speed, safety, and modern technology since 2012.</p>
             </div>
 
             <div class="col-lg-4">
@@ -230,7 +164,7 @@
                     <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
                 </div>
                 <div class="mt-4">
-                    <p class="mb-1 small opacity-50 font-syne">OFFICIAL SUPPORT</p>
+                    <p class="mb-1 small  font-syne">OFFICIAL SUPPORT</p>
                     <p class="fw-bold">+91 9517048512</p>
                 </div>
             </div>
@@ -240,22 +174,14 @@
         
         <div class="row">
             <div class="col-md-12 text-start text-md-center">
-                <p class="small opacity-50">© 2026 ULTRA SHIFT | DESIGNED BY KULDEEP (9517048512)</p>
+                <p class="small ">© 2026 ULTRA SHIFT | DESIGNED BY KULDEEP (9517048512)</p>
             </div>
         </div>
     </div>
 </footer>
-
-<style>
-    /* Chota sa hover effect links ke liye */
-    .hover-link:hover {
-        color: var(--accent) !important;
-        padding-left: 5px;
-        transition: 0.3s;
-    }
-    .text-accent { color: #FF6B00 !important; }
-</style>
-
+    <a href="https://wa.me/919517048512" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

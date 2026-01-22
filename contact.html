@@ -10,67 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        
-        /* --- Info Cards --- */
-        .info-card {
-            background: white;
-            padding: 40px;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-            height: 100%;
-            transition: 0.3s;
-            text-align: center;
-            border-bottom: 5px solid transparent;
-        }
-        .info-card:hover { transform: translateY(-10px); border-color: var(--accent); }
-        .info-icon {
-            width: 70px; height: 70px; background: rgba(255,107,0,0.1);
-            color: var(--accent); border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; font-size: 1.8rem;
-            margin: 0 auto 20px;
-        }
-
-        /* --- Contact Form & Map Section --- */
-        .contact-main { margin-top: -50px; position: relative; z-index: 5; }
-        
-        .form-container {
-            background: var(--primary);
-            color: white;
-            padding: 50px;
-            border-radius: 30px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
-        }
-        
-        .form-control-pro {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 15px;
-            color: white !important;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-        .form-control-pro:focus { background: rgba(255,255,255,0.15); border-color: var(--accent); box-shadow: none; }
-        .form-control-pro::placeholder { color: rgba(255,255,255,0.5); }
-
-        .map-frame {
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            height: 100%;
-            min-height: 400px;
-        }
-
-        .btn-accent {
-            background: var(--accent); color: white; border: none;
-            padding: 15px 40px; border-radius: 12px; font-weight: 700;
-            width: 100%; transition: 0.3s;
-        }
-        .btn-accent:hover { transform: scale(1.02); box-shadow: 0 10px 20px rgba(255,107,0,0.3); }
-
-        .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; text-decoration: none; }
-    </style>
 </head>
 <body>
 
@@ -81,9 +20,9 @@
                 <i class="fas fa-phone-alt text-accent ms-4 me-2"></i> +91 9517048512
             </div>
             <div class="d-flex gap-3">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook-f text-white"></i></a>
+                <a href="#"><i class="fab fa-instagram text-white"></i></a>
+                <a href="#"><i class="fab fa-youtube text-white"></i></a>
             </div>
         </div>
     </div>
@@ -91,7 +30,7 @@
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <button class="border-0 bg-transparent me-2" data-bs-toggle="offcanvas" data-bs-target="#sidebarLeft">
-                <i class="fas fa-bars-staggered fs-2 text-primary"></i>
+                <i class="fas fa-bars-staggered fs-2 text-dark"></i>
             </button>
             <a class="navbar-brand font-syne fs-2" href="#">ULTRA<span style="color:var(--accent)">SHIFT</span></a>
             <div class="collapse navbar-collapse justify-content-end">
@@ -102,8 +41,6 @@
                     <li><a class="nav-link" href="blog.html">Blog</a></li>
                     <li><a class="nav-link" href="tracking.html">Tracking</a></li>
                     <li><a class="nav-link" href="contact.html">Contact</a></li>
-                   
-                    <li><a class="nav-link" href="#faq">FAQ</a></li>
                     <li><a class="btn btn-dark text-white rounded-pill px-4 ms-3" href="tel:9517048512">CALL PRO</a></li>
                 </ul>
             </div>
@@ -119,9 +56,9 @@
             <a href="blog.html" class="text-white text-decoration-none fs-4">04. Blog</a>
             <a href="tracking.html" class="text-white text-decoration-none fs-4">04. Tracking</a>
             <a href="contact.html" class="text-white text-decoration-none fs-4">05. Contact</a>
-            <div class="mt-auto border-top border-secondary pt-4 text-white-50">
-                <p>Hotline: 9517048512</p>
-                <p>Email: kuldeep.helps@gmail.com</p>
+            <div class="mt-auto border-top border-secondary pt-4 text-white">
+                <p>9517048512</p>
+                <p>kuldeep.helps@gmail.com</p>
             </div>
         </div>
     </div>
@@ -213,7 +150,7 @@
             
             <div class="col-lg-4">
                 <h2 class="font-syne text-accent">ULTRA SHIFT</h2>
-                <p class="opacity-50">Leading the Indian logistics industry with speed, safety, and modern technology since 2012.</p>
+                <p class="">Leading the Indian logistics industry with speed, safety, and modern technology since 2012.</p>
             </div>
 
             <div class="col-lg-4">
@@ -233,7 +170,7 @@
                     <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
                 </div>
                 <div class="mt-4">
-                    <p class="mb-1 small opacity-50 font-syne">OFFICIAL SUPPORT</p>
+                    <p class="mb-1 small font-syne">OFFICIAL SUPPORT</p>
                     <p class="fw-bold">+91 9517048512</p>
                 </div>
             </div>
@@ -243,23 +180,12 @@
         
         <div class="row">
             <div class="col-md-12 text-start text-md-center">
-                <p class="small opacity-50">© 2026 ULTRA SHIFT | DESIGNED BY KULDEEP (9517048512)</p>
+                <p class="small ">© 2026 ULTRA SHIFT | DESIGNED BY KULDEEP (9517048512)</p>
             </div>
         </div>
     </div>
 </footer>
-
-<style>
-    /* Chota sa hover effect links ke liye */
-    .hover-link:hover {
-        color: var(--accent) !important;
-        padding-left: 5px;
-        transition: 0.3s;
-    }
-    .text-accent { color: #FF6B00 !important; }
-</style>
     <a href="https://wa.me/919517048512" class="whatsapp-btn shadow-lg"><i class="fab fa-whatsapp"></i></a>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
